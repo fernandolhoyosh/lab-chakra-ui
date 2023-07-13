@@ -1,20 +1,26 @@
-import { Center, Flex, Spacer } from "@chakra-ui/react";
-import { Heading, Image } from "@chakra-ui/react";
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Center, Flex, Text, Button, ButtonGroup } from "@chakra-ui/react";
 
 const Header = () => {
   return (
     <>
-      <Flex direction="column" justify="center" p="5em" bgGradient='https://th.bing.com/th/id/OIG.YP5l6NilBEUqZUkg7Olo?pid=ImgGn'>
+      <Flex
+      direction="column"
+      justify="center"
+      alignItems='center'
+      p="5em 0"
+      bg="url('./src/images/motorcycle.jpeg')"
+      bgSize='cover'
+      bgPosition='center'
+      /* bgRepeat='no-repeat' */>
         <Center>
-          <Heading as="h4" size="md">
+        <Text fontSize='3xl' p=".5em 0">
             DOMINA EL TERRENO
-          </Heading>
+        </Text>
         </Center>
         <Center>
-          <ButtonGroup variant="outline" colorScheme="white">
-            <Button>VER DETALLES</Button>
-            <Button>VER VIDEO</Button>
+          <ButtonGroup size="sm" variant="outline" colorScheme="white">
+            <Button _hover={{bg:'white', color:'rgba(0, 0, 0, 0.5)'}}>VER DETALLES</Button>
+            <Button _hover={{bg:'white', color:'rgba(0, 0, 0, 0.5)'}}>VER VIDEO</Button>
           </ButtonGroup>
         </Center>
       </Flex>
